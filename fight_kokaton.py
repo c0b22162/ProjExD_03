@@ -140,6 +140,14 @@ class Beam:
         screen.blit(self.img, self.rct)
 
 
+class Explosion:
+    def __init__(self, explosion_image, bomb_rect):
+        self.images = []
+
+        flipped_image = pg.transform.flip(explosion_image, True, True)
+        self.images.append(flipped_image)
+
+
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
