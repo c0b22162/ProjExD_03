@@ -142,6 +142,7 @@ class Beam:
 
 class Explosion:
     def __init__(self, explosion_image, bomb_rect):
+        self.images = pg.transform.rotozoom(pg.image.load(f"ex03/fig/explosion.gif"), 0, 2.0)
         self.images = []
 
         flipped_image = pg.transform.flip(explosion_image, True, True)
