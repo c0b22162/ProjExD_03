@@ -147,6 +147,8 @@ class Explosion:
         flipped_image = pg.transform.flip(explosion_image, True, True)
         self.images.append(flipped_image)
 
+        self.life = 60
+
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
