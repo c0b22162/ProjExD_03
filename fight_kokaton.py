@@ -147,7 +147,10 @@ class Explosion:
         flipped_image = pg.transform.flip(explosion_image, True, True)
         self.images.append(flipped_image)
 
-        self.life = 60
+        self.rct = self.images[0].get_rct()
+        self.rct.center = bomb_rect.center
+
+        self.life = 5
 
 
 def main():
